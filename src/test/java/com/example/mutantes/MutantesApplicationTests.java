@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class MutantesApplicationTests {
 	
-	// Tests cubriendo todas las secuencias de matriz 6x6
+	// Tests MUTANTES
 	@Test
 	public void testRows() {
 		String[] dna = {
@@ -73,32 +73,7 @@ public class MutantesApplicationTests {
 		assertTrue(DnaService.isMutant(dna));
 	}
 	
-	@Test
-	public void testTertiaryLeftDiagonals() {
-		String[] dna = {
-				"ATGATG",
-				"GTAGTA",
-				"CCTTGG",
-				"TCTAGG",
-				"GGCGTC",
-				"AGTCAA"
-		};
-		assertTrue(DnaService.isMutant(dna));
-	}
-	
-	@Test
-	public void testTertiaryRightDiagonals() {
-		String[] dna = {
-				"ATGATG",
-				"GTATTA",
-				"AATTGG",
-				"ACTAGT",
-				"GGAGTC",
-				"AGGCAA"
-		};
-		assertTrue(DnaService.isMutant(dna));
-	}
-	
+	//TESTS NO MUTANTES
 	@Test
 	public void testNonMutant() {
 		String[] dna = {
@@ -112,8 +87,19 @@ public class MutantesApplicationTests {
 		assertFalse(DnaService.isMutant(dna));
 	}
 	
+	@Test
+	public void testTertiaryRightDiagonals() {
+		String[] dna = {
+				"ATGATG",
+				"GTCACA",
+				"CTTTGG",
+				"AACAGT",
+				"GCACTC",
+				"AGGCAA"
+		};
+		assertFalse(DnaService.isMutant(dna));
+	}
 	
-	// ====================================================================================================
 	// Tests brindados por el profesor
 	@Test
 	public void testMutant1() {

@@ -15,9 +15,11 @@ public class StatsService {
     }
     
     public StatsResponse getStats(){
+        //Contador de mutantes/humanos
         long countMutantDna = dnaRepository.countByIsMutant(true);
         long countHumanDna = dnaRepository.countByIsMutant(false);
         
+        //Calculo de radio
         double ratio = countHumanDna == 0 ? 0: (double) countMutantDna / countHumanDna;
         return new StatsResponse(countMutantDna, countHumanDna, ratio);
 }

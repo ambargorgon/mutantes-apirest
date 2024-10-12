@@ -11,6 +11,7 @@ public class DnaValidator implements ConstraintValidator<ValidDna, String[]> {
     public void initialize(ValidDna constraintAnnotation) {
     }
     
+    //Validador de ingresos correctos al servicio
     @Override
     public boolean isValid(String[] dna, ConstraintValidatorContext context) {
         if (dna == null) {
