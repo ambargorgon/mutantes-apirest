@@ -6,6 +6,9 @@ Esta API analiza secuencias de ADN determinando si corresponden a un Mutante o H
 La API está hosteada en Render:
 - URL: `https://mutantes-apirest-1.onrender.com`
 
+## 🗺️ Diagrama de Secuencia
+![diagramasecuencia](https://github.com/user-attachments/assets/cffbbd37-8464-43f5-bf6e-756a01fef01d)
+
 
 ## Construida con:
 - SpringBoot 
